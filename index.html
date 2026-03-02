@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Alexey Ponomarev — Senior DevOps & SRE Engineer</title>
+     <meta name="description"
+          content="Senior DevOps Engineer with 16+ years in IT, 5+ years focused on AWS cloud infrastructure, automation, Kubernetes, Terraform, and production reliability. Open to remote work.">
+     <meta name="keywords"
+          content="DevOps, SRE, AWS, Kubernetes, Terraform, CI/CD, Cloud Engineer, Infrastructure Automation">
+     <meta name="author" content="Alexey Ponomarev">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+          rel="stylesheet">
+     <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+     <!-- Navigation -->
+     <nav class="navbar" id="navbar">
+          <div class="nav-container">
+               <a href="#hero" class="nav-logo">
+                    <span class="logo-bracket">{</span> AP <span class="logo-bracket">}</span>
+               </a>
+               <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                    <span></span><span></span><span></span>
+               </button>
+               <ul class="nav-links" id="navLinks">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#certifications">Certs</a></li>
+                    <li><a href="#contact" class="nav-cta">Contact</a></li>
+               </ul>
+          </div>
+     </nav>
+
+     <!-- Hero Section -->
+     <section class="hero" id="hero">
+          <div class="hero-bg-grid"></div>
+          <div class="hero-particles" id="heroParticles"></div>
+          <div class="hero-content">
+               <div class="hero-text">
+                    <div class="hero-badge">
+                         <span class="status-dot"></span>
+                         Open to Remote Opportunities
+                    </div>
+                    <h1 class="hero-title">
+                         <span class="hero-greeting">Hello, I'm</span>
+                         <span class="hero-name">Alexey Ponomarev</span>
+                         <span class="hero-role" id="heroRole"></span>
+                    </h1>
+                    <p class="hero-description">
+                         DevOps Engineer with <strong>16+ years</strong> in IT and <strong>8+ years</strong> focused on
+                         AWS cloud infrastructure, automation, and production reliability. I build highly available,
+                         fault-tolerant systems and love solving complex infrastructure problems.
+                    </p>
+                    <div class="hero-stats">
+                         <div class="stat-item">
+                              <span class="stat-number" data-target="16">0</span><span class="stat-suffix">+</span>
+                              <span class="stat-label">Years in IT</span>
+                         </div>
+                         <div class="stat-item">
+                              <span class="stat-number" data-target="8">0</span><span class="stat-suffix">+</span>
+                              <span class="stat-label">Years AWS</span>
+                         </div>
+                         <div class="stat-item">
+                              <span class="stat-number" data-target="3">0</span>
+                              <span class="stat-label">AWS Pro Certs</span>
+                         </div>
+                         <div class="stat-item">
+                              <span class="stat-number" data-target="100">0</span><span class="stat-suffix">s</span>
+                              <span class="stat-label">Services Dockerized</span>
+                         </div>
+                    </div>
+                    <div class="hero-actions">
+                         <a href="#experience" class="btn btn-primary">
+                              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                   stroke-width="2">
+                                   <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                                   <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                              </svg>
+                              View Experience
+                         </a>
+                         <a href="#contact" class="btn btn-outline">
+                              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                   stroke-width="2">
+                                   <path
+                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                   <polyline points="22,6 12,13 2,6" />
+                              </svg>
+                              Get in Touch
+                         </a>
+                    </div>
+               </div>
+               <div class="hero-terminal">
+                    <div class="terminal-window">
+                         <div class="terminal-header">
+                              <div class="terminal-dots">
+                                   <span class="dot dot-red"></span>
+                                   <span class="dot dot-yellow"></span>
+                                   <span class="dot dot-green"></span>
+                              </div>
+                              <span class="terminal-title">alexey@devops ~ %</span>
+                         </div>
+                         <div class="terminal-body" id="terminalBody">
+                              <div class="terminal-line">
+                                   <span class="terminal-prompt">$</span>
+                                   <span class="terminal-text" id="terminalText"></span>
+                                   <span class="terminal-cursor">▋</span>
+                              </div>
+                              <div class="terminal-output" id="terminalOutput"></div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+          <div class="scroll-indicator">
+               <div class="scroll-mouse">
+                    <div class="scroll-wheel"></div>
+               </div>
+               <span>Scroll down</span>
+          </div>
+     </section>
+
+     <!-- About Section -->
+     <section class="section about" id="about">
+          <div class="container">
+               <div class="section-header">
+                    <span class="section-tag">// about_me</span>
+                    <h2 class="section-title">Professional Summary</h2>
+               </div>
+               <div class="about-grid">
+                    <div class="about-card about-main">
+                         <div class="about-icon">
+                              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                   stroke-width="1.5">
+                                   <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                                   <path d="M2 17l10 5 10-5" />
+                                   <path d="M2 12l10 5 10-5" />
+                              </svg>
+                         </div>
+                         <h3>Infrastructure as Code</h3>
+                         <p>Specializing in Terraform and CloudFormation to build reproducible, auditable, and
+                              version-controlled infrastructure across multiple AWS accounts and regions.</p>
+                    </div>
+                    <div class="about-card">
+                         <div class="about-icon">
+                              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                   stroke-width="1.5">
+                                   <circle cx="12" cy="12" r="3" />
+                                   <path
+                                        d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83" />
+                              </svg>
+                         </div>
+                         <h3>Kubernetes & Containers</h3>
+                         <p>Deep experience with EKS, Docker, ArgoCD for GitOps-driven container orchestration at scale.
+                         </p>
+                    </div>
+                    <div class="about-card">
+                         <div class="about-icon">
+                              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                   stroke-width="1.5">
+                                   <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                              </svg>
+                         </div>
+                         <h3>CI/CD Automation</h3>
+                         <p>Building robust pipelines with GitHub Actions, GitLab CI, Jenkins, and Atlantis for safe,
+                              fast deployments.</p>
+                    </div>
+                    <div class="about-card">
+                         <div class="about-icon">
+                              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                   stroke-width="1.5">
+                                   <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                                   <circle cx="12" cy="12" r="3" />
+                              </svg>
+                         </div>
+                         <h3>Observability & SRE</h3>
+                         <p>Prometheus, Grafana, VictoriaMetrics, ELK/EFK — building full-stack monitoring and alerting
+                              for production reliability.</p>
+                    </div>
+               </div>
+          </div>
+     </section>
+
+     <!-- Skills Section -->
+     <section class="section skills" id="skills">
+          <div class="container">
+               <div class="section-header">
+                    <span class="section-tag">// tech_stack</span>
+                    <h2 class="section-title">Core Skills</h2>
+               </div>
+               <div class="skills-grid">
+                    <!-- Cloud -->
+                    <div class="skill-category" data-category="cloud">
+                         <div class="skill-category-header">
+                              <div class="skill-category-icon cloud">
+                                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" />
+                                   </svg>
+                              </div>
+                              <h3>Cloud & AWS</h3>
+                         </div>
+                         <div class="skill-tags">
+                              <span class="skill-tag">EC2</span>
+                              <span class="skill-tag">S3</span>
+                              <span class="skill-tag">VPC</span>
+                              <span class="skill-tag">IAM</span>
+                              <span class="skill-tag">EKS</span>
+                              <span class="skill-tag">ECS</span>
+                              <span class="skill-tag">RDS</span>
+                              <span class="skill-tag">DynamoDB</span>
+                              <span class="skill-tag">Route53</span>
+                              <span class="skill-tag">Transit Gateway</span>
+                              <span class="skill-tag">Lambda</span>
+                              <span class="skill-tag">API Gateway</span>
+                              <span class="skill-tag">CloudWatch</span>
+                              <span class="skill-tag">SNS</span>
+                              <span class="skill-tag">SES</span>
+                         </div>
+                    </div>
+
+                    <!-- IaC -->
+                    <div class="skill-category" data-category="iac">
+                         <div class="skill-category-header">
+                              <div class="skill-category-icon iac">
+                                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <polyline points="16 18 22 12 16 6" />
+                                        <polyline points="8 6 2 12 8 18" />
+                                   </svg>
+                              </div>
+                              <h3>Infrastructure as Code</h3>
+                         </div>
+                         <div class="skill-tags">
+                              <span class="skill-tag">Terraform</span>
+                              <span class="skill-tag">CloudFormation</span>
+                              <span class="skill-tag">Atlantis</span>
+                         </div>
+                    </div>
+
+                    <!-- Containers -->
+                    <div class="skill-category" data-category="containers">
+                         <div class="skill-category-header">
+                              <div class="skill-category-icon containers">
+                                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+                                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                                   </svg>
+                              </div>
+                              <h3>Containers & Orchestration</h3>
+                         </div>
+                         <div class="skill-tags">
+                              <span class="skill-tag">Docker</span>
+                              <span class="skill-tag">Kubernetes</span>
+                              <span class="skill-tag">AWS EKS</span>
+                              <span class="skill-tag">ECS</span>
+                              <span class="skill-tag">ArgoCD</span>
+                         </div>
+                    </div>
+
+                    <!-- CI/CD -->
+                    <div class="skill-category" data-category="cicd">
+                         <div class="skill-category-header">
+                              <div class="skill-category-icon cicd">
+                                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <circle cx="12" cy="12" r="10" />
+                                        <polyline points="12 6 12 12 16 14" />
+                                   </svg>
+                              </div>
+                              <h3>CI/CD</h3>
+                         </div>
+                         <div class="skill-tags">
+                              <span class="skill-tag">GitHub Actions</span>
+                              <span class="skill-tag">GitLab CI</span>
+                              <span class="skill-tag">Jenkins</span>
+                              <span class="skill-tag">ArgoCD</span>
+                              <span class="skill-tag">Atlantis</span>
+                         </div>
+                    </div>
+
+                    <!-- Monitoring -->
+                    <div class="skill-category" data-category="monitoring">
+                         <div class="skill-category-header">
+                              <div class="skill-category-icon monitoring">
+                                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+                                   </svg>
+                              </div>
+                              <h3>Observability & Monitoring</h3>
+                         </div>
+                         <div class="skill-tags">
+                              <span class="skill-tag">Prometheus</span>
+                              <span class="skill-tag">Grafana</span>
+                              <span class="skill-tag">VictoriaMetrics</span>
+                              <span class="skill-tag">ELK</span>
+                              <span class="skill-tag">EFK</span>
+                         </div>
+                    </div>
+
+                    <!-- Scripting -->
+                    <div class="skill-category" data-category="scripting">
+                         <div class="skill-category-header">
+                              <div class="skill-category-icon scripting">
+                                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <polyline points="4 17 10 11 4 5" />
+                                        <line x1="12" y1="19" x2="20" y2="19" />
+                                   </svg>
+                              </div>
+                              <h3>Scripting & Databases</h3>
+                         </div>
+                         <div class="skill-tags">
+                              <span class="skill-tag">Bash</span>
+                              <span class="skill-tag">Python</span>
+                              <span class="skill-tag">PostgreSQL</span>
+                              <span class="skill-tag">MySQL</span>
+                              <span class="skill-tag">Redis</span>
+                         </div>
+                    </div>
+
+                    <!-- Networking -->
+                    <div class="skill-category" data-category="networking">
+                         <div class="skill-category-header">
+                              <div class="skill-category-icon networking">
+                                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <rect x="2" y="2" width="20" height="8" rx="2" ry="2" />
+                                        <rect x="2" y="14" width="20" height="8" rx="2" ry="2" />
+                                        <line x1="6" y1="6" x2="6.01" y2="6" />
+                                        <line x1="6" y1="18" x2="6.01" y2="18" />
+                                   </svg>
+                              </div>
+                              <h3>Networking</h3>
+                         </div>
+                         <div class="skill-tags">
+                              <span class="skill-tag">VPC Design</span>
+                              <span class="skill-tag">ALB/NLB</span>
+                              <span class="skill-tag">VPN</span>
+                              <span class="skill-tag">DNS</span>
+                              <span class="skill-tag">Transit Gateway</span>
+                         </div>
+                    </div>
+
+                    <!-- Practices -->
+                    <div class="skill-category" data-category="practices">
+                         <div class="skill-category-header">
+                              <div class="skill-category-icon practices">
+                                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M12 20h9" />
+                                        <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
+                                   </svg>
+                              </div>
+                              <h3>Practices & Methodology</h3>
+                         </div>
+                         <div class="skill-tags">
+                              <span class="skill-tag">Infrastructure as Code</span>
+                              <span class="skill-tag">GitOps</span>
+                              <span class="skill-tag">Immutable Infrastructure</span>
+                              <span class="skill-tag">SRE</span>
+                              <span class="skill-tag">HA/FT Design</span>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </section>
+
+     <!-- Experience Section -->
+     <section class="section experience" id="experience">
+          <div class="container">
+               <div class="section-header">
+                    <span class="section-tag">// work_history</span>
+                    <h2 class="section-title">Experience</h2>
+               </div>
+               <div class="timeline">
+                    <!-- Wallarm -->
+                    <div class="timeline-item" data-aos="fade-up">
+                         <div class="timeline-marker">
+                              <div class="timeline-dot"></div>
+                              <div class="timeline-line"></div>
+                         </div>
+                         <div class="timeline-content">
+                              <div class="timeline-card">
+                                   <div class="timeline-header">
+                                        <div class="timeline-company-info">
+                                             <h3 class="timeline-company">Wallarm</h3>
+                                             <span class="timeline-role">Senior DevOps Engineer</span>
+                                        </div>
+                                        <div class="timeline-meta">
+                                             <span class="timeline-date">Jun 2024 — Present</span>
+                                             <span class="timeline-badge current">Current</span>
+                                        </div>
+                                   </div>
+                                   <p class="timeline-description">API Security Platform — <a
+                                             href="https://www.wallarm.com" target="_blank"
+                                             rel="noopener">wallarm.com</a></p>
+                                   <ul class="timeline-achievements">
+                                        <li>
+                                             <span class="achievement-icon">⚡</span>
+                                             Designed and optimized CI/CD pipelines using GitHub Actions and GitLab CI,
+                                             reducing deployment time and improving release stability
+                                        </li>
+                                        <li>
+                                             <span class="achievement-icon">☸️</span>
+                                             Built and maintained Kubernetes environments across AWS and other cloud
+                                             providers, improving system scalability and fault tolerance
+                                        </li>
+                                        <li>
+                                             <span class="achievement-icon">🏗️</span>
+                                             Implemented Terraform modules to standardize infrastructure provisioning,
+                                             enabling reproducible and auditable deployments
+                                        </li>
+                                        <li>
+                                             <span class="achievement-icon">📊</span>
+                                             Improved observability stack (Prometheus, Grafana, VictoriaMetrics, EFK),
+                                             increasing visibility and reducing incident resolution time
+                                        </li>
+                                        <li>
+                                             <span class="achievement-icon">🔒</span>
+                                             Automated Docker image builds and vulnerability scanning, strengthening
+                                             container security posture
+                                        </li>
+                                        <li>
+                                             <span class="achievement-icon">☁️</span>
+                                             Supported multi-cloud integrations (AWS, GCP, Azure) and enterprise
+                                             platforms (Cloudflare, MuleSoft, IBM)
+                                        </li>
+                                   </ul>
+                                   <div class="timeline-tech">
+                                        <span>Kubernetes</span><span>Terraform</span><span>GitHub
+                                             Actions</span><span>GitLab
+                                             CI</span><span>Prometheus</span><span>Grafana</span><span>Docker</span>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+
+                    <!-- ClearScale -->
+                    <div class="timeline-item" data-aos="fade-up">
+                         <div class="timeline-marker">
+                              <div class="timeline-dot"></div>
+                              <div class="timeline-line"></div>
+                         </div>
+                         <div class="timeline-content">
+                              <div class="timeline-card">
+                                   <div class="timeline-header">
+                                        <div class="timeline-company-info">
+                                             <h3 class="timeline-company">ClearScale</h3>
+                                             <span class="timeline-role">Senior DevOps Engineer</span>
+                                        </div>
+                                        <div class="timeline-meta">
+                                             <span class="timeline-date">Feb 2020 — Jun 2024</span>
+                                             <span class="timeline-badge">4+ years</span>
+                                        </div>
+                                   </div>
+                                   <p class="timeline-description">AWS Premier Tier Services Partner — <a
+                                             href="https://clearscale.com" target="_blank"
+                                             rel="noopener">clearscale.com</a></p>
+                                   <ul class="timeline-achievements">
+                                        <li>
+                                             <span class="achievement-icon">🚀</span>
+                                             Led migration of large-scale production workloads from on-premise to AWS,
+                                             designing HA and fault-tolerant architectures
+                                        </li>
+                                        <li>
+                                             <span class="achievement-icon">🐳</span>
+                                             Dockerized and modernized hundreds of services, enabling Kubernetes-based
+                                             deployments
+                                        </li>
+                                        <li>
+                                             <span class="achievement-icon">🏗️</span>
+                                             Designed and implemented Terraform-based infrastructure for multiple
+                                             enterprise clients
+                                        </li>
+                                        <li>
+                                             <span class="achievement-icon">⚙️</span>
+                                             Built CI/CD pipelines (Jenkins, GitHub Actions) to automate application
+                                             delivery across environments
+                                        </li>
+                                        <li>
+                                             <span class="achievement-icon">☸️</span>
+                                             Deployed and supported Kubernetes clusters in multi-account AWS
+                                             environments
+                                        </li>
+                                        <li>
+                                             <span class="achievement-icon">👥</span>
+                                             Participated in technical interviews and onboarding of DevOps engineers
+                                        </li>
+                                   </ul>
+                                   <div class="timeline-tech">
+                                        <span>AWS</span><span>Terraform</span><span>Kubernetes</span><span>Docker</span><span>Jenkins</span><span>GitHub
+                                             Actions</span><span>EKS</span>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+
+                    <!-- ZenSoft -->
+                    <div class="timeline-item" data-aos="fade-up">
+                         <div class="timeline-marker">
+                              <div class="timeline-dot"></div>
+                              <div class="timeline-line"></div>
+                         </div>
+                         <div class="timeline-content">
+                              <div class="timeline-card">
+                                   <div class="timeline-header">
+                                        <div class="timeline-company-info">
+                                             <h3 class="timeline-company">ZenSoft</h3>
+                                             <span class="timeline-role">DevOps Engineer</span>
+                                        </div>
+                                        <div class="timeline-meta">
+                                             <span class="timeline-date">Nov 2016 — Feb 2020</span>
+                                             <span class="timeline-badge">3+ years</span>
+                                        </div>
+                                   </div>
+                                   <p class="timeline-description">Custom Software Development Services — <a
+                                             href="https://www.zensoft.io" target="_blank" rel="noopener">zensoft.io</a>
+                                   </p>
+                                   <ul class="timeline-achievements">
+                                        <li>
+                                             <span class="achievement-icon">☁️</span>
+                                             Maintained and improved AWS infrastructure (EC2, RDS, Beanstalk, VPC)
+                                        </li>
+                                        <li>
+                                             <span class="achievement-icon">⚡</span>
+                                             Built CI/CD pipelines using Jenkins, GitLab CI, TeamCity
+                                        </li>
+                                        <li>
+                                             <span class="achievement-icon">🔄</span>
+                                             Automated environment provisioning using Docker and infrastructure scripts
+                                        </li>
+                                        <li>
+                                             <span class="achievement-icon">🔐</span>
+                                             Established VPN connectivity between office infrastructure and AWS
+                                        </li>
+                                        <li>
+                                             <span class="achievement-icon">✅</span>
+                                             Reduced deployment errors by implementing automated pre-release testing
+                                             environments
+                                        </li>
+                                   </ul>
+                                   <div class="timeline-tech">
+                                        <span>AWS</span><span>Docker</span><span>Jenkins</span><span>GitLab
+                                             CI</span><span>VPN</span><span>Bash</span>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+
+                    <!-- ExtraLine -->
+                    <div class="timeline-item" data-aos="fade-up">
+                         <div class="timeline-marker">
+                              <div class="timeline-dot"></div>
+                         </div>
+                         <div class="timeline-content">
+                              <div class="timeline-card">
+                                   <div class="timeline-header">
+                                        <div class="timeline-company-info">
+                                             <h3 class="timeline-company">ExtraLine Ltd.</h3>
+                                             <span class="timeline-role">Systems / Billing Engineer</span>
+                                        </div>
+                                        <div class="timeline-meta">
+                                             <span class="timeline-date">Nov 2007 — Nov 2016</span>
+                                             <span class="timeline-badge">9 years</span>
+                                        </div>
+                                   </div>
+                                   <p class="timeline-description">ISP service provider — <a href="https://homeline.kg"
+                                             target="_blank" rel="noopener">homeline.kg</a></p>
+                                   <ul class="timeline-achievements">
+                                        <li>
+                                             <span class="achievement-icon">🌐</span>
+                                             Designed and maintained network and server infrastructure for ISP
+                                             environment
+                                        </li>
+                                        <li>
+                                             <span class="achievement-icon">🔧</span>
+                                             Modernized network infrastructure, improving reliability and security
+                                        </li>
+                                        <li>
+                                             <span class="achievement-icon">💳</span>
+                                             Migrated legacy billing system to BGBilling 5.0 and developed billing
+                                             extensions in Java
+                                        </li>
+                                        <li>
+                                             <span class="achievement-icon">📞</span>
+                                             Implemented Asterisk-based telephony system
+                                        </li>
+                                   </ul>
+                                   <div class="timeline-tech">
+                                        <span>Linux</span><span>Networking</span><span>Java</span><span>Asterisk</span><span>VoIP</span>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </section>
+
+     <!-- Certifications Section -->
+     <section class="section certifications" id="certifications">
+          <div class="container">
+               <div class="section-header">
+                    <span class="section-tag">// certifications</span>
+                    <h2 class="section-title">AWS Certifications</h2>
+               </div>
+               <div class="certs-grid">
+                    <div class="cert-card" data-cert="devops">
+                         <div class="cert-glow"></div>
+                         <div class="cert-badge">
+                              <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                   stroke-width="1.5">
+                                   <path d="M12 15l-2 5l2-2l2 2l-2-5z" />
+                                   <circle cx="12" cy="9" r="6" />
+                                   <path d="M9 9l1.5 1.5L13.5 7" />
+                              </svg>
+                         </div>
+                         <h3>AWS DevOps Engineer</h3>
+                         <span class="cert-level">Professional</span>
+                         <div class="cert-focus">CI/CD, Automation, Monitoring, Security, HA Systems</div>
+                    </div>
+                    <div class="cert-card" data-cert="architect">
+                         <div class="cert-glow"></div>
+                         <div class="cert-badge">
+                              <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                   stroke-width="1.5">
+                                   <path d="M12 15l-2 5l2-2l2 2l-2-5z" />
+                                   <circle cx="12" cy="9" r="6" />
+                                   <path d="M9 9l1.5 1.5L13.5 7" />
+                              </svg>
+                         </div>
+                         <h3>Solutions Architect</h3>
+                         <span class="cert-level">Professional</span>
+                         <div class="cert-focus">Architecture Design, Cost Optimization, Migration</div>
+                    </div>
+                    <div class="cert-card" data-cert="networking">
+                         <div class="cert-glow"></div>
+                         <div class="cert-badge">
+                              <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                   stroke-width="1.5">
+                                   <path d="M12 15l-2 5l2-2l2 2l-2-5z" />
+                                   <circle cx="12" cy="9" r="6" />
+                                   <path d="M9 9l1.5 1.5L13.5 7" />
+                              </svg>
+                         </div>
+                         <h3>Advanced Networking</h3>
+                         <span class="cert-level">Specialty</span>
+                         <div class="cert-focus">VPC, VPN, Direct Connect, Route53, CloudFront</div>
+                    </div>
+               </div>
+          </div>
+     </section>
+
+     <!-- Education Section -->
+     <section class="section education" id="education">
+          <div class="container">
+               <div class="section-header">
+                    <span class="section-tag">// education</span>
+                    <h2 class="section-title">Education</h2>
+               </div>
+               <div class="education-card">
+                    <div class="edu-icon">
+                         <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                              stroke-width="1.5">
+                              <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                              <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                         </svg>
+                    </div>
+                    <div class="edu-info">
+                         <h3>Kyrgyz State University of Building, Transport and Architecture</h3>
+                         <p class="edu-faculty">Faculty — Institution of New Information Technologies</p>
+                         <p class="edu-major">Major — Information Technologies in Business</p>
+                         <span class="edu-date">2004 — 2009</span>
+                    </div>
+               </div>
+          </div>
+     </section>
+
+     <!-- Contact Section -->
+     <section class="section contact" id="contact">
+          <div class="container">
+               <div class="section-header">
+                    <span class="section-tag">// get_in_touch</span>
+                    <h2 class="section-title">Let's Work Together</h2>
+                    <p class="section-subtitle">I'm always open to new opportunities and interesting projects. Feel free
+                         to reach out!</p>
+               </div>
+               <div class="contact-grid">
+                    <a href="mailto:braekneck@gmail.com" class="contact-card" id="contactEmail">
+                         <div class="contact-icon">
+                              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                   stroke-width="1.5">
+                                   <path
+                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                   <polyline points="22,6 12,13 2,6" />
+                              </svg>
+                         </div>
+                         <h3>Email</h3>
+                         <p>braekneck@gmail.com</p>
+                    </a>
+                    <a href="https://t.me/braekneck" target="_blank" rel="noopener" class="contact-card"
+                         id="contactTelegram">
+                         <div class="contact-icon">
+                              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                   stroke-width="1.5">
+                                   <path d="M21.2 5L2.5 12.2l6.1 2.3L19 7.5l-8.1 8.6v5L14.5 17l4.1 3.1L21.2 5z" />
+                              </svg>
+                         </div>
+                         <h3>Telegram</h3>
+                         <p>@braekneck</p>
+                    </a>
+                    <a href="https://linkedin.com/in/drongo" target="_blank" rel="noopener" class="contact-card"
+                         id="contactLinkedIn">
+                         <div class="contact-icon">
+                              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                   stroke-width="1.5">
+                                   <path
+                                        d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                                   <rect x="2" y="9" width="4" height="12" />
+                                   <circle cx="4" cy="4" r="2" />
+                              </svg>
+                         </div>
+                         <h3>LinkedIn</h3>
+                         <p>linkedin.com/in/drongo</p>
+                    </a>
+                    <div class="contact-card" id="contactLocation">
+                         <div class="contact-icon">
+                              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                   stroke-width="1.5">
+                                   <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                   <circle cx="12" cy="10" r="3" />
+                              </svg>
+                         </div>
+                         <h3>Location</h3>
+                         <p>Bishkek, Kyrgyzstan</p>
+                         <span class="contact-note">Open to Remote</span>
+                    </div>
+               </div>
+          </div>
+     </section>
+
+     <!-- Footer -->
+     <footer class="footer">
+          <div class="container">
+               <div class="footer-content">
+                    <span class="footer-logo">
+                         <span class="logo-bracket">{</span> AP <span class="logo-bracket">}</span>
+                    </span>
+                    <p>&copy; 2026 Alexey Ponomarev. Built with passion for DevOps.</p>
+               </div>
+          </div>
+     </footer>
+
+     <script src="script.js"></script>
+</body>
+
+</html>
